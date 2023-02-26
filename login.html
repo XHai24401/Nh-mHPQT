@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -15,6 +15,22 @@
         <label for="">Mật khẩu</label>
         <input id="txtMatkhau" type="text" name="txtMatkhau">
     </form>
+    <script>
+        function login() {
+            // Lấy giá trị của ô nhập liệu
+            var username = document.getElementById("txtUsername").value;
+            var password = document.getElementById("txtMatkhau").value;
+
+            // Kiểm tra tên đăng nhập và mật khẩu
+            if (username === "admin" && password === "admin") {
+                // Chuyển hướng đến trang home.html
+                window.location.href = "home.html";
+            } else {
+                // Thông báo lỗi đăng nhập
+                alert("Tên đăng nhập hoặc mật khẩu không đúng.");
+            }
+        }
+    </script>
 </body>
 
 </html>
