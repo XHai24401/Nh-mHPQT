@@ -13,16 +13,16 @@
         <label for="">Tên đăng nhập</label>
         <input id="txtUsername" type="text" name="txtUsername">
         <label for="">Mật khẩu</label>
-        <input id="txtPassword" type="text" name="txtPassword">
+        <input type="password" id="txtPassword" type="text" name="txtPassword">
         <div>
-            <button id="btnLogin">Đăng nhập</button>
+            <button type="button" id="btnLogin" onclick="login()">Đăng nhập</button>
         </div>
     </form>
     <script>
         function login() {
             // Lấy giá trị của ô nhập liệu
             var username = document.getElementById("txtUsername").value;
-            var password = document.getElementById("txtMatkhau").value;
+            var password = document.getElementById("txtPassword").value;
 
             // Kiểm tra tên đăng nhập và mật khẩu
             if (username === "admin" && password === "admin") {
